@@ -1,24 +1,34 @@
+// convert to REM
+@mixin toRem($property, $value) {
+    #{$property}: ($value / 20) + rem;
+}
+
 $base-font: 'Raleway', sans-serif;
 $secondary-font: 'Maven Pro', sans-serif;
 $heading-font: 'Comfortaa', cursive;
 
 $light: #fff;
-$light-medium: #eaeaea;
+$light-medium: #e3e3e3;
 $medium: #a4a4a4;
 $dark: #1b1b1b;
 $accent-1: #30ffc6;
 $accent-2: #ff3057;
 
-@mixin button-one($size, $color) {
-    background: $accent-2;
+@mixin button($size, $color, $background, $border) {
+    background: $background;
     color: $color;
     font-size: $size;
+    border: $border;
+    @include toRem(letter-spacing, 2);
     text-transform: uppercase;
     cursor: pointer;
+    @include toRem(padding, 12);
+    @include toRem(padding-right, 35);
+    transition: 0.5s;
 }
 
-
-// convert to REM
-@mixin toRem($property, $value) {
-    #{$property}: ($value / 20) + rem;
+@mixin button-hover($color, $background, $border) {
+    color: $color;
+    background: $background;
+    border: $border;
 }

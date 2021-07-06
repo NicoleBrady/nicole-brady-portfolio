@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -282,8 +283,109 @@ button {
   background: #ff3057;
   color: #fff;
   font-size: 0.6rem;
+  border: 4px solid transparent;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   cursor: pointer;
+  padding: 0.6rem;
+  padding-right: 1.75rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.button-one:hover {
+  color: #ff3057;
+  background: transparent;
+  border: 4px solid #ff3057;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Comfortaa", cursive;
+  text-transform: lowercase;
+  font-size: 4.5rem;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  color: #e3e3e3;
+  font-family: "Maven Pro", sans-serif;
+  text-transform: lowercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.04rem;
+  font-weight: 400;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 3rem;
+}
+
+.logo-title-header {
+  color: #fff;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.logo-title-header::before {
+  content: "🌲";
+}
+
+.logo-title-header::after {
+  content: "💻";
+}
+
+.desktop-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.desktop-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.desktop-nav-list li {
+  font-family: "Comfortaa", cursive;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  text-transform: lowercase;
+  width: 5rem;
+  text-align: center;
+}
+
+.desktop-nav-list li a {
+  display: inline-block;
+  color: #a4a4a4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0.25rem;
+}
+.desktop-nav-list li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  background: #fff;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  margin-top: 0.2rem;
+}
+
+.desktop-nav-list li a:hover:after {
+  width: 99%;
+  color: #fff;
+}
+
+.desktop-nav-list li a:hover {
+  color: #fff;
 }
 
 header {
@@ -293,4 +395,79 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+}
+
+.hero-section {
+  padding-top: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.hero-left h1 {
+  line-height: 5.5rem;
+}
+
+header h2 span {
+  color: #30ffc6;
+  font-weight: 500;
+}
+
+.hero-left a {
+  padding-top: 2.75rem;
+}
+
+.hero-socials {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+  -webkit-writing-mode: sideways-lr;
+      -ms-writing-mode: sideways-lr;
+          writing-mode: sideways-lr;
+  -webkit-text-orientation: mixed;
+          text-orientation: mixed;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.15rem;
+}
+.hero-socials a {
+  color: #a4a4a4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.hero-socials a:hover {
+  color: #30ffc6;
+}
+
+.skip-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2.5rem;
+}
+.skip-arrow .fa-sort-down {
+  color: #fff;
+  font-size: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.skip-arrow .fa-sort-down:hover {
+  color: #30ffc6;
+  cursor: pointer;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }

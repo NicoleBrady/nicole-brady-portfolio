@@ -1,3 +1,68 @@
+// Logo and navigation stylezzzz
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    @include toRem(padding-top, 60);
+}
+
+.logo-title-header {
+    color: $light;
+    font-family: $secondary-font;
+    @include toRem(font-size, 30);
+    @include toRem(letter-spacing, 2);
+}
+
+.logo-title-header::before {
+    content: "🌲";
+}
+
+.logo-title-header::after {
+    content: "💻";
+}
+
+.desktop-nav {
+    display: flex;
+}
+
+.desktop-nav-list {
+    display: flex;
+}
+
+.desktop-nav-list li {
+    font-family: $heading-font;
+    @include toRem(font-size, 14);
+    @include toRem(letter-spacing, 1);
+    text-transform: lowercase;
+    @include toRem(width, 100);
+    text-align: center;
+}
+
+.desktop-nav-list li a {
+    display: inline-block;
+    color: $medium;
+    transition: .3s;
+    @include toRem(padding, 5);
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            @include toRem(height, 2);
+            background: $light;
+            transition: width .3s;
+            @include toRem(margin-top, 4);
+        }
+}
+
+.desktop-nav-list li a:hover:after {
+    width: 99%;
+    color: $light;
+}
+
+.desktop-nav-list li a:hover {
+    color: $light;
+}
+
 // Header styles 
 
 header {
@@ -8,3 +73,58 @@ header {
     background-position: bottom;
 }
 
+.hero-section {
+    @include toRem(padding-top, 130);
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+        h1 {
+            @include toRem(line-height, 110);
+        }
+}
+
+header h2 span {
+    color: $accent-1;
+    font-weight: 500;
+}
+
+.hero-left a {
+    @include toRem(padding-top, 55);
+}
+
+.hero-socials {
+    font-family: $secondary-font;
+    font-weight: 500;
+    writing-mode:sideways-lr;
+    text-orientation: mixed;
+    text-transform: uppercase;
+    @include toRem(font-size, 12);
+    @include toRem(letter-spacing, 3);
+        a {
+            color: $medium;
+            transition: 0.3s;
+            &:hover {
+                color: $accent-1;
+            }
+        }
+}
+
+.skip-arrow {
+    display: flex;
+    justify-content: center;
+    @include toRem(padding-top, 50);
+        .fa-sort-down {
+            color: $light;
+            @include toRem(font-size, 40);
+            transition: 0.5s;
+                &:hover {
+                    color: $accent-1;
+                    cursor: pointer;
+                    transform: translateY(20px);
+                }
+        }
+}

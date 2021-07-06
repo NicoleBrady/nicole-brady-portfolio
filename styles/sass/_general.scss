@@ -42,5 +42,25 @@ button {
 }
 
 .button-one {
-    @include button-one(0.6rem, $light);
+    @include button(0.6rem, $light, $accent-2, 4px solid transparent);
+        &:hover {
+            @include button-hover($accent-2, transparent, 4px solid $accent-2);
+        }
+}
+
+h1 {
+    color: $light;
+    font-family: $heading-font;
+    text-transform: lowercase;
+    @include toRem(font-size, 90);
+    @include toRem(letter-spacing, -2);
+}
+
+h2 {
+    color: $light-medium;
+    font-family: $secondary-font;
+    text-transform: lowercase;
+    @include toRem(font-size, 28);
+    @include toRem(letter-spacing, 0.8);
+    font-weight: 400;
 }

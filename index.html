@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/69db758927.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -41,16 +41,27 @@
     !</div> -->
     <div class="wrapper">
         <div class="hero-section">
-            <h1>Nicole Brady</h1>
-            <h2><span>Front-End</span> Web Developer.</h2>
-            <a href="#contact">
-                <button class="button-one">Let's Chat!</button>
-            </a>
-        </div>
-        <div class="hero-socials">
-            <a href="https://www.linkedin.com/in/nicole-brady-dev/">LinkedIn</a>
+            <div class="hero-left">
+                <h1>Nicole Brady</h1>
+                <h2><span>Front-End</span> Web Developer.</h2>
+                <a href="#contact">
+                    <button class="button-one">Let's Chat!</button>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/nicole-brady-dev/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
         </div>
     </div>
+    <div class="skip-arrow">
+        <i id="skip" class="fas fa-sort-down"></i>
+        <p id="skip" class="sr-only">skip to main content</p>
+    </div>
 </header>
+
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
