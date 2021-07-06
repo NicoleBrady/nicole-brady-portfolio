@@ -1,0 +1,24 @@
+$base-font: 'Raleway', sans-serif;
+$secondary-font: 'Maven Pro', sans-serif;
+$heading-font: 'Comfortaa', cursive;
+
+$light: #fff;
+$light-medium: #eaeaea;
+$medium: #a4a4a4;
+$dark: #1b1b1b;
+$accent-1: #30ffc6;
+$accent-2: #ff3057;
+
+@mixin button-one($size, $color) {
+    background: $accent-2;
+    color: $color;
+    font-size: $size;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+// convert to REM
+@mixin toRem($property, $value) {
+    #{$property}: ($value / 20) + rem;
+}
