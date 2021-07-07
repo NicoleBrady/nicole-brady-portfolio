@@ -41,10 +41,23 @@ button {
     margin: 0 auto;
 }
 
+.inner-wrapper {
+    max-width: 1170px;
+    width: 70%;
+    margin: 0 auto;
+}
+
 .button-one {
-    @include button(0.6rem, $light, $accent-2, 4px solid transparent);
+    @include button(0.6rem, $light, $accent-2, 2px solid transparent);
         &:hover {
-            @include button-hover($accent-2, transparent, 4px solid $accent-2);
+            @include button-hover($accent-2, transparent, 2px solid $accent-2);
+        }
+}
+
+.button-two {
+    @include button(0.6rem, $accent-2, transparent, 2px solid $accent-2);
+        &:hover {
+            @include button-hover($light, $accent-2, 2px solid $accent-2);
         }
 }
 

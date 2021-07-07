@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
     <script src="https://kit.fontawesome.com/69db758927.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <!-- Header starts here -->
-<header>
+<header class="page-header">
     <!-- Navigation starts here -->
     <nav class="nav-bar wrapper">
         <a href="index.html">
@@ -59,7 +60,129 @@
     </div>
 </header>
 
+<main id="main">
 
+    <!-- About section starts here -->
+    <section id="about" class="about-me">
+        <header class="section-header">
+            <div class="header-content wrapper">
+                <div class="page-count">
+                    <p class="page-count-number"><span>01</span></p>
+                </div>
+                <h3 class="section-title">About</h3>
+            </div>
+        </header>
+        <div class="about-inner-container inner-wrapper">
+            <div class="about-image-container">
+                <img src="./assets/about-photo.jpg" alt="nicole brady">
+            </div>
+            <div class="about-text-content">
+                <p class="about-one">Hi, my name is Nicole.</p>
+                <p class="about-two">I'm a recent graduate of Juno College's Web Development Immersive Bootcamp.</p>
+                <p class="about-three">Will always be searching for a way to combine my love for the outdoors with my love for coding. Check out <a href="#skills">my tech stack</a> below, or take a look at my resume to see if I would be a good fit for your project and/or company.</p>
+                <a href="./assets/nicole-brady-resume.pdf" target="_blank" rel="noopener">
+                    <button class="button-two">Resume <i class="fas fa-file-download"></i></button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills section starts here -->
+    <section id="skills" class="skills">
+        <ul class="skills-grid wrapper">
+            <li><i class="devicon-html5-plain"></i></li>
+            <li><i class="devicon-css3-plain"></i></li>
+            <li><i class="devicon-javascript-plain"></i></li>
+            <li><i class="devicon-sass-original"></i></li>
+            <li><i class="devicon-jquery-plain"></i></li>
+            <li><i class="devicon-git-plain"></i></li>
+            <li><i class="devicon-github-original"></i></li>
+            <li><i class="devicon-firebase-plain"></i></li>
+            <li><i class="fas fa-mobile-alt"></i></li>
+            <li><i class="fas fa-universal-access"></i></li>
+            <li><i class="devicon-vscode-plain"></i></li>
+        <ul>
+    </section>
+
+    <!-- Portfolio section starts here -->
+    <section id="portfolio" class="portfolio">
+        <header class="section-header">
+            <div class="header-content wrapper">
+                <div class="page-count">
+                    <p class="page-count-number"><span>02</span></p>
+                </div>
+                <h3 class="section-title">Portfolio</h3>
+            </div>
+        </header>
+        <div class="portfolio-grid inner-wrapper">
+            <!-- boat ride adventures -->
+            <figure class="portfolio-effect one">
+                <img src="./assets/boat-ride-adventures.png" alt="PSD conversion">
+                <figcaption>
+                    <h4>PSD <span>conversion</span></h4>
+                    <div class="portfolio-content">
+                        <p>Solo project converting a design into a multi-page, functional, responsive website.</p>
+                        <a href="https://nicolebrady.github.io/nicole-brady-project1/" target="_blank" rel="noopener">
+                            <button class="button-one">Live Site</button>
+                        </a>
+                        <a href="https://github.com/NicoleBrady/nicole-brady-project1" target="_blank" rel="noopener">
+                            <button class="button-two">View Code</button>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+            <!-- No thrills -->
+            <figure class="portfolio-effect two">
+                <img src="./assets/no-thrills.png" alt="no thrills an online store">
+                <figcaption>
+                    <h4>Online <span>Store</span></h4>
+                    <div class="portfolio-content">
+                        <p>Online store built with react and firebase.</p>
+                        <a href="https://no-thrills.netlify.app/" target="_blank" rel="noopener">
+                            <button class="button-one">Live Site</button>
+                        </a>
+                        <a href="https://github.com/NicoleBrady/nicole-brady-project3" target="_blank" rel="noopener">
+                            <button class="button-two">View Code</button>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+            <!-- Weather App -->
+            <figure class="portfolio-effect three">
+                <img src="./assets/weather-app.png" alt="weather app">
+                <figcaption>
+                    <h4>Pair <span>Programming</span></h4>
+                    <div class="portfolio-content">
+                        <p>Weather application built with the Open Weather API and Vanilla Javascript.</p>
+                        <a href="https://weather-app-juno.netlify.app/" target="_blank" rel="noopener">
+                            <button class="button-one">Live Site</button>
+                        </a>
+                        <a href="https://github.com/nicole-tj-project2/weatherApp" target="_blank" rel="noopener">
+                            <button class="button-two">View Code</button>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+            <!-- What do you no -->
+            <figure class="portfolio-effect four">
+                <img src="./assets/what-do-you-no.png" alt="what do you no? game">
+                <figcaption>
+                    <h4>Group <span>collaboration</span></h4>
+                    <div class="portfolio-content">
+                        <p>A word game built with the Datamuse API, Firebase, React, and SCSS.</p>
+                        <a href="https://what-do-you-no.netlify.app/" target="_blank" rel="noopener">
+                            <button class="button-one">Live Site</button>
+                        </a>
+                        <a href="https://github.com/Spring34Group2/whatDoYouNo" target="_blank" rel="noopener">
+                            <button class="button-two">View Code</button>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+</main>
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script.js"></script>

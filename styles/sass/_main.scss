@@ -48,7 +48,7 @@
             display: block;
             width: 0;
             @include toRem(height, 2);
-            background: $light;
+            background: $accent-2;
             transition: width .3s;
             @include toRem(margin-top, 4);
         }
@@ -56,7 +56,7 @@
 
 .desktop-nav-list li a:hover:after {
     width: 99%;
-    color: $light;
+    color: $accent-2;
 }
 
 .desktop-nav-list li a:hover {
@@ -65,7 +65,7 @@
 
 // Header styles 
 
-header {
+.page-header {
     height: 100vh;
     background-image: linear-gradient(0deg, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url('/assets/nb-bg.jpeg');
     background-repeat: no-repeat;
@@ -116,7 +116,7 @@ header h2 span {
 .skip-arrow {
     display: flex;
     justify-content: center;
-    @include toRem(padding-top, 50);
+    @include toRem(padding-top, 100);
         .fa-sort-down {
             color: $light;
             @include toRem(font-size, 40);
@@ -127,4 +127,257 @@ header h2 span {
                     transform: translateY(20px);
                 }
         }
+}
+
+// section header styles
+
+.section-header {
+    padding: 1rem 0;
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            @include toRem(height, 0.2);
+            margin-top: 20px;
+            margin-left: 0;
+            position: absolute;
+            z-index: -2;
+            box-shadow: 1px 2px 3px 1px $light-medium;
+        }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    color: $dark;
+    font-family: $heading-font;
+    @include toRem(font-size, 22);
+    @include toRem(letter-spacing, 1);
+    text-transform: lowercase;
+}
+
+.page-count-number {
+    color: $medium;
+    font-family: $secondary-font;
+    font-weight: 400;
+    @include toRem(font-size, 40);
+    position: relative;
+        &:after {
+            content: "";
+            display: block;
+            @include toRem(width, 100);
+            @include toRem(height, 2);
+            background: $medium;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            z-index: -1;
+        }
+}
+
+.page-count-number span {
+    background: $light;
+}
+
+// About section styles
+
+.about-me {
+    background-image: url('/assets/about-bg.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.about-inner-container {
+    display: flex;
+    height: 80vh;
+    gap: 40px;
+    padding: 4rem 0;
+}
+
+.about-image-container {
+    max-width: 100%;
+    height: auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+}
+
+.about-text-content {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 2.5rem 0;
+}
+
+.about-one {
+    color: $accent-2;
+    font-family: $secondary-font;
+    @include toRem(font-size, 26);
+    @include toRem(letter-spacing, 1);
+    font-weight: 700;
+}
+
+.about-two {
+    color: $dark;
+    font-family: $heading-font;
+    @include toRem(letter-spacing, 0.8);
+    font-weight: 700;
+}
+
+.about-three {
+    color: #686868;
+    @include toRem(font-size, 14);
+        a {
+            color: $dark;
+            transition: 0.3s;
+                &:hover {
+                    color: $accent-2;
+                }
+        }
+}
+
+.about-two,
+.about-three {
+    @include toRem(line-height, 22);
+}
+
+// skills styles 
+.skills {
+    background: $dark;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 0;
+}
+
+.skills-grid li i {
+    color: $accent-1;
+    @include toRem(font-size, 60);
+}
+
+// Portfolio grid styles
+.one {grid-area: one; } .two {grid-area: two; } .three {grid-area: three; } .four {grid-area: four; }
+.portfolio-grid {
+    padding: 2rem 0;
+    margin: 2rem auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 14px 14px; 
+    grid-template-areas: 
+    "one two"
+    "three four"; 
+}
+
+.portfolio-effect {
+    position: relative;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    cursor: pointer;
+    background: $dark;
+    padding: 2rem;
+        img {
+            position: relative;
+            opacity: 0.3;
+        }
+}
+
+.portfolio-effect figcaption {
+    color: $light;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: right;
+}
+
+.portfolio-effect figcaption::before,
+.portfolio-effect figcaption::after {
+    pointer-events: none;
+}
+
+.portfolio-effect figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-effect figcaption > a {
+    z-index: 10;
+}
+
+.portfolio-effect figcaption h4 {
+    color: $accent-1;
+    font-family: $heading-font;
+    top: -4%;
+    text-transform: lowercase;
+    @include toRem(font-size, 28);
+        span {
+            font-weight: 700;
+            color: $light;
+        }
+}
+
+.portfolio-effect figcaption h4:after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $light;
+    transform: translate3d(0,10px,0);
+}
+
+.portfolio-effect h4,
+.portfolio-content {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+}
+
+.portfolio-content {
+    bottom: 35px;
+    transform: translate3d(0,135%,0);
+}
+
+.portfolio-effect figcaption h4:after,
+.portfolio-content {
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.portfolio-effect:hover h4::after,
+.portfolio-effect:hover .portfolio-content {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+.portfolio-effect figcaption:hover {
+    background: $dark;
+}
+
+.portfolio-content a {
+    margin: 0 0.2rem;
+} 
+
+.portfolio-content p {
+    padding-bottom: 0.2rem;
+}
+
+.portfolio-content .button-one,
+.portfolio-content .button-two {
+    @include toRem(padding, 10);
+    @include toRem(padding-right, 20);
 }
