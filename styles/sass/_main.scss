@@ -63,6 +63,25 @@
     color: $light;
 }
 
+// Mobile navigation styles
+
+.mobile-nav-button {
+    position: relative;
+    left: 55%;
+    top: 50%;
+    display: none;
+    color: $light;
+    background: none;
+    border: none;
+    @include toRem(font-size, 40);
+    cursor: pointer;
+    z-index: 50;
+}
+
+.mobile-nav-slider {
+    display: none;
+}
+
 // Header styles 
 
 .page-header {
@@ -255,13 +274,28 @@ header h2 span {
 
 .skills-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 6rem 0;
+    padding: 4rem 0;
+        li {
+            width: 100px;
+            margin: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
 }
 
 .skills-grid li i {
     color: $accent-1;
     @include toRem(font-size, 60);
+}
+
+.skills-grid p {
+    color: $light;
+    font-family: $heading-font;
+    text-transform: lowercase;
+    @include toRem(font-size, 16);
+    padding-top: 0.6rem;
 }
 
 // Portfolio grid styles
@@ -380,4 +414,79 @@ header h2 span {
 .portfolio-content .button-two {
     @include toRem(padding, 10);
     @include toRem(padding-right, 20);
+}
+
+// Media queries ******************************************************************************
+
+@media (max-width: 1020px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav-button {
+        display: contents;
+    }
+
+    .close-button {
+        color: $light;
+        background: none;
+        border: none;
+        @include toRem(font-size, 40);
+        cursor: pointer;
+        z-index: 50;
+    }
+
+    .mobile-nav-slider {
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        background: $dark;
+        height: 100vh;
+        width: 100%;
+        z-index: 49;
+        transition: .53s transform;
+        transition-timing-function: cubic-bezier(.38,.52,.37,1);
+        display: none;
+    }
+    
+    .mobile-nav-list {
+        color: $light;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 5rem;
+            li {
+                overflow: hidden;
+                    a {
+                        color: $light;
+                        font-family: $heading-font;
+                        text-transform: lowercase;
+                        @include toRem(font-size, 40);
+                        @include toRem(padding, 20);
+                    }
+            }
+    }
+    
+    .mobile-nav-list li a:hover {
+        color: $accent-1;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
 }

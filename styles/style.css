@@ -413,6 +413,23 @@ h2 {
   color: #fff;
 }
 
+.mobile-nav-button {
+  position: relative;
+  left: 55%;
+  top: 50%;
+  display: none;
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.mobile-nav-slider {
+  display: none;
+}
+
 .page-header {
   height: 100vh;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(20, 20, 20, 0.8)), to(rgba(20, 20, 20, 0.8))), url("/assets/nb-bg.jpeg");
@@ -639,15 +656,31 @@ header h2 span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 6rem 0;
+  padding: 4rem 0;
+}
+.skills-grid li {
+  width: 100px;
+  margin: 40px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .skills-grid li i {
   color: #30ffc6;
   font-size: 3rem;
+}
+
+.skills-grid p {
+  color: #fff;
+  font-family: "Comfortaa", cursive;
+  text-transform: lowercase;
+  font-size: 0.8rem;
+  padding-top: 0.6rem;
 }
 
 .one {
@@ -784,4 +817,89 @@ header h2 span {
 .portfolio-content .button-two {
   padding: 0.5rem;
   padding-right: 1rem;
+}
+
+@media (max-width: 1020px) {
+  html,
+body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav-button {
+    display: contents;
+  }
+
+  .close-button {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  .mobile-nav-slider {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background: #1b1b1b;
+    height: 100vh;
+    width: 100%;
+    z-index: 49;
+    -webkit-transition: 0.53s -webkit-transform;
+    transition: 0.53s -webkit-transform;
+    transition: 0.53s transform;
+    transition: 0.53s transform, 0.53s -webkit-transform;
+    -webkit-transition-timing-function: cubic-bezier(0.38, 0.52, 0.37, 1);
+            transition-timing-function: cubic-bezier(0.38, 0.52, 0.37, 1);
+    display: none;
+  }
+
+  .mobile-nav-list {
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5rem;
+  }
+  .mobile-nav-list li {
+    overflow: hidden;
+  }
+  .mobile-nav-list li a {
+    color: #fff;
+    font-family: "Comfortaa", cursive;
+    text-transform: lowercase;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .mobile-nav-list li a:hover {
+    color: #30ffc6;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+  }
 }
