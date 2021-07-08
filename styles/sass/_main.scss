@@ -416,6 +416,117 @@ header h2 span {
     @include toRem(padding-right, 20);
 }
 
+// Contact styles start here
+.contact {
+    color: $light;
+    background: $dark;
+    padding: 4rem 0;
+}
+
+.contact p {
+    font-family: $heading-font;
+    color: $light-medium;
+    @include toRem(font-size, 14);
+    @include toRem(letter-spacing, 1.4);
+    @include toRem(line-height, 20);
+
+}
+
+.contact-container {
+    display: flex;
+    @include toRem(gap, 100);
+}
+
+.contact h3 {
+    font-family: $secondary-font;
+    @include toRem(font-size, 24);
+    @include toRem(letter-spacing, 0.6);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form label {
+    text-transform: uppercase;
+    font-weight: 700;
+    @include toRem(font-size, 10);
+    @include toRem(letter-spacing, 3);
+    padding-top: 1rem;
+}
+
+.form input,
+.form textarea {
+    @include toRem(font-size, 12);
+    @include toRem(letter-spacing, 1);
+    font-style: italic;
+    background: none;
+    border: none;
+    color: $light-medium;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-bottom: 1px solid $medium;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    transition: 0.3s;
+    border-bottom: 1px solid $accent-2;
+}
+
+.form button {
+    margin: 0.8rem 0;
+    align-self: flex-start;
+}
+
+.form-content,
+.contact-info-container {
+    flex: 1 0 50%;
+}
+
+.contact-socials {
+    color: $accent-2;
+    @include toRem(font-size, 60);
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-start;
+    gap: 1rem;
+}
+
+.contact-info-container .phone {
+    color: $light-medium;
+    transition: 0.3s;
+        &:hover {
+            color: $accent-2;
+        }
+}
+
+.form-content p,
+.contact-socials {
+    padding: 1rem 0;
+}
+
+.contact-info-container p {
+    padding: 0.2rem 0;
+}
+
+.contact-info-container p span {
+    @include toRem(font-size, 12);
+    @include toRem(letter-spacing, 3);
+    font-weight: 700;
+}
+
+footer {
+    background: $dark;
+    text-align: center;
+    color: $light;
+    padding: 1rem 0;
+    font-family: $heading-font;
+    text-transform: lowercase;
+}
+
 // Media queries ******************************************************************************
 
 @media (max-width: 1020px) {

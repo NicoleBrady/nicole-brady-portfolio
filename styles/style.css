@@ -819,6 +819,131 @@ header h2 span {
   padding-right: 1rem;
 }
 
+.contact {
+  color: #fff;
+  background: #1b1b1b;
+  padding: 4rem 0;
+}
+
+.contact p {
+  font-family: "Comfortaa", cursive;
+  color: #e3e3e3;
+  font-size: 0.7rem;
+  letter-spacing: 0.07rem;
+  line-height: 1rem;
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+.contact h3 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.5rem;
+  letter-spacing: 0.15rem;
+  padding-top: 1rem;
+}
+
+.form input,
+.form textarea {
+  font-size: 0.6rem;
+  letter-spacing: 0.05rem;
+  font-style: italic;
+  background: none;
+  border: none;
+  color: #e3e3e3;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-bottom: 1px solid #a4a4a4;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px solid #ff3057;
+}
+
+.form button {
+  margin: 0.8rem 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.form-content,
+.contact-info-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+}
+
+.contact-socials {
+  color: #ff3057;
+  font-size: 3rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1rem;
+}
+
+.contact-info-container .phone {
+  color: #e3e3e3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.contact-info-container .phone:hover {
+  color: #ff3057;
+}
+
+.form-content p,
+.contact-socials {
+  padding: 1rem 0;
+}
+
+.contact-info-container p {
+  padding: 0.2rem 0;
+}
+
+.contact-info-container p span {
+  font-size: 0.6rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+}
+
+footer {
+  background: #1b1b1b;
+  text-align: center;
+  color: #fff;
+  padding: 1rem 0;
+  font-family: "Comfortaa", cursive;
+  text-transform: lowercase;
+}
+
 @media (max-width: 1020px) {
   html,
 body {
