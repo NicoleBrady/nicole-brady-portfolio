@@ -495,6 +495,10 @@ textarea:focus {
     gap: 1rem;
 }
 
+.contact-socials a {
+    color: $accent-2;
+}
+
 .contact-info-container .phone {
     color: $light-medium;
     transition: 0.3s;

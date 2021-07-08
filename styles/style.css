@@ -911,6 +911,10 @@ textarea:focus {
   gap: 1rem;
 }
 
+.contact-socials a {
+  color: #ff3057;
+}
+
 .contact-info-container .phone {
   color: #e3e3e3;
   -webkit-transition: 0.3s;
