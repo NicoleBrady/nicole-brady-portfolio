@@ -962,6 +962,12 @@ body {
     display: none;
   }
 
+  .desktop-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .mobile-nav-button {
     display: contents;
   }
@@ -1030,5 +1036,300 @@ body {
     position: absolute;
     top: 3%;
     right: 5%;
+  }
+
+  .hero-section {
+    padding-top: 7rem;
+  }
+
+  .skip-arrow {
+    padding-top: 1.5rem;
+  }
+
+  .about-inner-container {
+    gap: 0;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    padding: 2rem 0;
+  }
+  .skills-grid li {
+    margin: 24px;
+  }
+
+  .portfolio-grid {
+    padding: 1rem 0;
+    margin: 1rem 3rem 1rem 1.2rem;
+    gap: 10px 10px;
+  }
+
+  .portfolio-effect {
+    min-width: 400px;
+    max-width: 480px;
+    max-height: 360px;
+  }
+
+  .portfolio-content p {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact {
+    padding: 4rem 0 1rem 0;
+  }
+
+  .contact-container {
+    gap: 3rem;
+  }
+
+  .contact-info-container p span {
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+  }
+}
+@media (max-width: 900px) {
+  .close-button {
+    padding-top: 1.5rem;
+  }
+
+  .mobile-nav-list {
+    padding-bottom: 2rem;
+  }
+
+  .page-header {
+    height: 80vh;
+  }
+
+  .hero-section {
+    padding-top: 11.75rem;
+  }
+
+  .hero-left h1 {
+    font-size: 4rem;
+  }
+
+  .skip-arrow {
+    padding-top: 2.75rem;
+  }
+
+  .about-inner-container {
+    height: 60vh;
+    width: 85%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0;
+    padding: 1rem 0;
+    margin-bottom: 0rem;
+  }
+
+  .about-image-container {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+  .about-image-container video {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-text-content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 80%;
+  }
+
+  .portfolio-grid {
+    padding: 2rem 0;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "one" "two" "three" "four";
+  }
+
+  .contact {
+    padding: 3rem 0 1rem 0;
+  }
+
+  .contact-container {
+    gap: 1.5rem;
+  }
+
+  .form-content {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+
+  .contact-info-container p span {
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+  }
+}
+@media (max-width: 500px) {
+  .close-button {
+    padding-top: 1.5rem;
+  }
+
+  .mobile-nav-list {
+    padding-bottom: 2rem;
+  }
+
+  .page-header {
+    height: 80vh;
+  }
+
+  .hero-section {
+    padding-top: 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 4rem;
+    line-height: 4.25rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-left a {
+    padding-top: 2rem;
+  }
+
+  .skip-arrow {
+    padding-top: 1rem;
+  }
+  .skip-arrow .fa-sort-down {
+    font-size: 3rem;
+  }
+
+  .about-inner-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    padding-top: 2.5rem;
+  }
+
+  .about-image-container video {
+    width: 300px;
+    height: 250px;
+  }
+
+  .about-text-content {
+    padding-top: 1rem;
+  }
+
+  .skills-grid {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .portfolio-grid {
+    padding: 2rem 0;
+    margin: 0 0 0 0.5rem;
+  }
+
+  .portfolio-effect {
+    min-width: 360px;
+  }
+
+  .portfolio-effect figcaption h4 {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-content {
+    bottom: 20px;
+  }
+
+  .contact {
+    padding: 3rem 0 1rem 0;
+  }
+
+  .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .form-content {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+}
+@media (max-width: 400px) {
+  .nav-bar {
+    padding-top: 1.5rem;
+  }
+
+  .logo-title-header {
+    padding-top: 0.2rem;
+  }
+
+  .close-button {
+    padding-top: 0.5rem;
+  }
+
+  .page-header {
+    height: 100vh;
+  }
+
+  .hero-section {
+    padding-top: 9rem;
+  }
+
+  .hero-left h1 {
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.04rem;
+  }
+
+  .hero-left a {
+    padding-top: 4rem;
+  }
+
+  .about-me {
+    background-position: center;
+  }
+
+  .about-text-content {
+    height: 100%;
+    padding: 0.5rem 0 0.2rem 0;
+  }
+
+  .portfolio-grid {
+    margin: 0 0 0 -0.4rem;
+  }
+
+  .portfolio-effect {
+    min-width: 310px;
+  }
+
+  .portfolio-effect figcaption h4 {
+    top: -10%;
+    font-size: 1.3rem;
+  }
+
+  .portfolio-effect figcaption h4:after {
+    top: 110%;
+  }
+
+  .portfolio-content {
+    bottom: 14px;
+  }
+
+  .portfolio-content p {
+    font-size: 0.7rem;
+  }
+
+  .form button {
+    width: 100%;
   }
 }

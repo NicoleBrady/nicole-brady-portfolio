@@ -535,73 +535,410 @@ footer {
 
 @media (max-width: 1020px) {
 
-    html,
-    body {
-        overflow-x: hidden;
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .desktop-nav {
+            display: none;
+        }
+
+        .desktop-nav-list {
+            display: flex;
+        }
+    
+        .mobile-nav-button {
+            display: contents;
+        }
+
+        .close-button {
+            color: $light;
+            background: none;
+            border: none;
+            @include toRem(font-size, 40);
+            cursor: pointer;
+            z-index: 50;
+        }
+
+        .mobile-nav-slider {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            background: $dark;
+            height: 100vh;
+            width: 100%;
+            z-index: 49;
+            transition: .53s transform;
+            transition-timing-function: cubic-bezier(.38,.52,.37,1);
+            display: none;
+        }
+        
+        .mobile-nav-list {
+            color: $light;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 5rem;
+                li {
+                    overflow: hidden;
+                        a {
+                            color: $light;
+                            font-family: $heading-font;
+                            text-transform: lowercase;
+                            @include toRem(font-size, 40);
+                            @include toRem(padding, 20);
+                        }
+                }
+        }
+        
+        .mobile-nav-list li a:hover {
+            color: $accent-1;
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 3%;
+            right: 5%;
+        }
+
+        // Header styles 
+
+    .hero-section {
+        @include toRem(padding-top, 140);
     }
 
-    body {
-        position: relative;
+    .skip-arrow {
+        @include toRem(padding-top, 30);
     }
 
-    .desktop-nav {
-        display: none;
+    // About section styles
+
+    .about-inner-container {
+        gap: 0;
+        padding: 3rem 0;
+        margin-bottom: 2rem;
     }
 
-    .mobile-nav-button {
-        display: contents;
+    // skills styles 
+
+    .skills-grid {
+        padding: 2rem 0;
+            li {
+                margin: 24px;
+            }
     }
+
+    // Portfolio grid styles
+
+    .portfolio-grid {
+        padding: 1rem 0;
+        margin: 1rem 3rem 1rem 1.2rem;
+        gap: 10px 10px;  
+    }
+
+    .portfolio-effect {
+        min-width: 400px;
+        max-width: 480px;
+        max-height: 360px;
+    }
+
+    .portfolio-content p {
+        margin-bottom: 0.5rem;
+    }
+
+    // Contact styles start here
+    .contact {
+        padding: 4rem 0 1rem 0 ;
+    }
+
+    .contact-container {
+        @include toRem(gap, 60);
+    }
+
+    .contact-info-container p span {
+        @include toRem(font-size, 12);
+        @include toRem(letter-spacing, 3);
+    }
+
+}
+
+@media (max-width: 900px) {
 
     .close-button {
-        color: $light;
-        background: none;
-        border: none;
-        @include toRem(font-size, 40);
-        cursor: pointer;
-        z-index: 50;
-    }
-
-    .mobile-nav-slider {
-        position: absolute;
-        top: 0%;
-        left: 100%;
-        background: $dark;
-        height: 100vh;
-        width: 100%;
-        z-index: 49;
-        transition: .53s transform;
-        transition-timing-function: cubic-bezier(.38,.52,.37,1);
-        display: none;
+        padding-top: 1.5rem;
     }
     
     .mobile-nav-list {
-        color: $light;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        width: 100%;
-        height: 100%;
-        padding-bottom: 5rem;
-            li {
-                overflow: hidden;
-                    a {
-                        color: $light;
-                        font-family: $heading-font;
-                        text-transform: lowercase;
-                        @include toRem(font-size, 40);
-                        @include toRem(padding, 20);
-                    }
+        padding-bottom: 2rem;
+    }
+
+        // Header styles 
+
+    .page-header {
+        height: 80vh;
+    }
+
+    .hero-section {
+        @include toRem(padding-top, 235);
+    }
+
+    .hero-left {
+            h1 {
+                @include toRem(font-size, 80);
             }
     }
-    
-    .mobile-nav-list li a:hover {
-        color: $accent-1;
+
+    .skip-arrow {
+        @include toRem(padding-top, 55);
     }
-    
+
+    // About section styles
+
+    .about-inner-container {
+        height: 60vh;
+        width: 85%;
+        align-items: center;
+        gap:0;
+        padding: 1rem 0;
+        margin-bottom: 0rem;
+    }
+
+    .about-image-container {
+        flex-basis: 60%;
+            video {
+                width: 300px;
+                height: 300px;
+            }
+    }
+
+    .about-text-content {
+        justify-content:space-around;
+        height: 80%;
+    }
+
+    // Portfolio grid styles
+
+    .portfolio-grid {
+        padding: 2rem 0;
+        margin: 0 auto; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 10px 10px; 
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"; 
+    }
+
+    // Contact styles start here
+    .contact {
+        padding: 3rem 0 1rem 0 ;
+    }
+
+    .contact-container {
+        @include toRem(gap, 30);
+    }
+
+    .form-content {
+        flex-basis: 60%;
+    }
+
+    .contact-info-container p span {
+        @include toRem(font-size, 12);
+        @include toRem(letter-spacing, 3);
+    }
+}
+
+@media (max-width: 500px) {
+        
     .close-button {
-        position: absolute;
-        top: 3%;
-        right: 5%;
+        padding-top: 1.5rem;
     }
+    
+    .mobile-nav-list {
+        padding-bottom: 2rem;
+    }
+
+        // Header styles 
+
+    .page-header {
+        height: 80vh;
+    }
+
+    .hero-section {
+        @include toRem(padding-top, 40);
+    }
+
+    .hero-left {
+            h1 {
+                @include toRem(font-size, 80);
+                @include toRem(line-height, 85);
+                padding-bottom: 0.5rem;
+            }
+    }
+
+    .hero-left a {
+        @include toRem(padding-top, 40);
+    }
+
+    .skip-arrow {
+        @include toRem(padding-top, 20);
+            .fa-sort-down {
+                @include toRem(font-size, 60);
+            }
+    }
+
+    // About section styles
+
+    .about-inner-container {
+        flex-direction: column;
+        height: 100vh;
+        padding-top: 2.5rem;
+    }
+
+    .about-image-container {
+            video {
+                width: 300px;
+                height: 250px;
+            }
+    }
+
+    .about-text-content {
+        padding-top: 1rem;
+    }
+
+    // skills styles 
+
+    .skills-grid {
+        justify-content: space-around;
+    }
+
+    // Portfolio grid styles
+
+    .portfolio-grid {
+        padding: 2rem 0;
+        margin: 0 0 0 0.5rem;
+    }
+
+    .portfolio-effect {
+        min-width: 360px;
+    }
+
+    .portfolio-effect figcaption h4 {
+        @include toRem(font-size, 26);
+    }
+
+    .portfolio-content {
+        bottom: 20px;
+    }
+
+    // Contact styles start here
+    .contact {
+        padding: 3rem 0 1rem 0 ;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .form button {
+        width: 100%;
+    }
+
+    .form-content {
+        flex-basis: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .nav-bar {
+        @include toRem(padding-top, 30);
+    }
+    
+    .logo-title-header {
+        padding-top: 0.2rem;
+    }
+
+    .close-button {
+        padding-top: 0.5rem;
+    }
+
+        // Header styles 
+
+    .page-header {
+        height: 100vh;
+    }
+
+    .hero-section {
+        @include toRem(padding-top, 180);
+    }
+
+    .hero-left {
+            h1 {
+                @include toRem(font-size, 65);
+                @include toRem(line-height, 70);
+            }
+    }
+
+    header h2 {
+        @include toRem(font-size, 24);
+        @include toRem(letter-spacing, 0.8);
+    }
+
+    .hero-left a {
+        @include toRem(padding-top, 80);
+    }
+
+    // About section styles
+
+    .about-me {
+        background-position: center;
+    }
+
+    .about-text-content {
+        height: 100%;
+        padding: 0.5rem 0 0.2rem 0;
+    }
+
+    // Portfolio grid styles
+
+    .portfolio-grid {
+        margin: 0 0 0 -0.4rem;
+    }
+
+    .portfolio-effect {
+        min-width: 310px;
+    }
+
+    .portfolio-effect figcaption h4 {
+        top: -10%;
+        @include toRem(font-size, 26);
+    }
+
+    .portfolio-effect figcaption h4:after {
+        top: 110%;
+    }
+
+    .portfolio-content {
+        bottom: 14px;
+    }
+
+    .portfolio-content p {
+        font-size: 0.7rem;
+    }
+
+    .form button {
+        width: 100%;
+    }
+
 }
