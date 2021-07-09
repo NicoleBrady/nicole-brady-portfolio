@@ -687,7 +687,7 @@ footer {
     }
 
     .hero-section {
-        @include toRem(padding-top, 235);
+        @include toRem(padding-top, 80);
     }
 
     .hero-left {
@@ -697,7 +697,7 @@ footer {
     }
 
     .skip-arrow {
-        @include toRem(padding-top, 55);
+        @include toRem(padding-top, 30);
     }
 
     // About section styles
