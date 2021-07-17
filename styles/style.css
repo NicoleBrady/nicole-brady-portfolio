@@ -499,7 +499,7 @@ header h2 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 .skip-arrow .fa-sort-down {
   color: #fff;
@@ -948,6 +948,28 @@ footer {
   text-transform: lowercase;
 }
 
+@media (min-width: 1400px) {
+  .hero-section {
+    padding-top: 17rem;
+  }
+
+  .about-text-content {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    height: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2.5rem 0;
+  }
+}
 @media (max-width: 1020px) {
   html,
 body {
@@ -1293,6 +1315,10 @@ body {
 
   .hero-left a {
     padding-top: 4rem;
+  }
+
+  .hero-socials {
+    display: none;
   }
 
   .about-me {

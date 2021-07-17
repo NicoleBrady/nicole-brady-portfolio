@@ -135,7 +135,7 @@ header h2 span {
 .skip-arrow {
     display: flex;
     justify-content: center;
-    @include toRem(padding-top, 100);
+    @include toRem(padding-top, 60);
         .fa-sort-down {
             color: $light;
             @include toRem(font-size, 40);
@@ -532,7 +532,24 @@ footer {
 }
 
 // Media queries ******************************************************************************
+// ***for larger screens***
+@media (min-width: 1400px) {
+    
+    .hero-section {
+        @include toRem(padding-top, 340);
+    }
 
+    .about-text-content {
+        flex-basis: 80%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        padding: 2.5rem 0;
+    }
+}
+
+// ***for smaller screens
 @media (max-width: 1020px) {
 
         html,
@@ -897,6 +914,10 @@ footer {
 
     .hero-left a {
         @include toRem(padding-top, 80);
+    }
+
+    .hero-socials {
+        display: none;
     }
 
     // About section styles
