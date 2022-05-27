@@ -482,6 +482,7 @@ header h2 span {
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
   text-orientation: mixed;
+  -webkit-text-orientation: upright;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 0.15rem;

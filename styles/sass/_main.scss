@@ -124,6 +124,7 @@ header h2 span {
     font-weight: 500;
     writing-mode:sideways-lr;
     text-orientation: mixed;
+    -webkit-text-orientation: upright;
     text-transform: uppercase;
     @include toRem(font-size, 12);
     @include toRem(letter-spacing, 3);
