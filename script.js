@@ -16,12 +16,14 @@ $(document).ready(function(){
 // mobile navigation
 
 function closeNav() {
+    $('body').toggleClass('lock-scroll');
     $(".mobile-nav-slider").fadeOut(200, function() {
         $(".mobile-nav-slider").css("display", "none");
             $(".mobile-nav-slider").css('left', '100%'); 
         });
 }
     $(".mobile-nav-button").click(function() {
+        $('body').toggleClass('lock-scroll');
         $(".mobile-nav-slider").fadeIn(300);
         $(".mobile-nav-slider").css("display", "flex");
             $(".mobile-nav-slider").css('left', '0%');

@@ -426,6 +426,10 @@ h2 {
   z-index: 50;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
 .mobile-nav-slider {
   display: none;
 }
@@ -477,8 +481,7 @@ header h2 span {
   -webkit-writing-mode: sideways-lr;
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
-  -webkit-text-orientation: mixed;
-          text-orientation: mixed;
+  text-orientation: mixed;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 0.15rem;
@@ -971,11 +974,6 @@ footer {
   }
 }
 @media (max-width: 1020px) {
-  html,
-body {
-    overflow-x: hidden;
-  }
-
   body {
     position: relative;
   }
@@ -1004,7 +1002,7 @@ body {
   }
 
   .mobile-nav-slider {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 100%;
     background: #1b1b1b;
